@@ -3,9 +3,34 @@
     "name": "supick_native",
     "slug": "supick_native",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/landing.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffc000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zeroone.supick",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.zeroone.supick",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
   },
   "name": "supick_native"
 }
