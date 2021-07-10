@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "supick_native",
+    "slug": "supick_native",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "supick_native"
+}
