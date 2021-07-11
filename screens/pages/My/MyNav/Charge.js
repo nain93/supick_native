@@ -4,6 +4,7 @@ import { colors, Title } from "../../../../Style";
 
 const Container = styled.View`
   flex: 1;
+  justify-content: center;
 `;
 
 const Charge = () => {

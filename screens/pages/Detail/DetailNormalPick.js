@@ -7,6 +7,7 @@ const Container = styled.View`
   flex: 1;
   background-color: ${colors.main};
   align-items: center;
+  justify-content: center;
 `;
 
 const QaText = styled.Text`
@@ -19,7 +20,6 @@ const QaText = styled.Text`
 const PickBtnBox = styled.View`
   width: 100%;
   align-items: center;
-  margin-top: 20%;
 `;
 
 const PickBtn = styled.TouchableOpacity`
@@ -55,22 +55,12 @@ const DetailNormalPick = ({ navigation }) => {
     }
   };
 
-  const handleAPick = () => {
+  const handlePick = () => {
     if (pickCount === 8) {
-      navigation.navigate("NormalResult");
+      navigation.navigate("Result");
       return;
     }
-    // todo A pick state 저장
-    setPickCount((pickCount) => pickCount + 1);
-    return;
-  };
-
-  const handleBPick = () => {
-    if (pickCount === 8) {
-      navigation.navigate("NormalResult");
-      return;
-    }
-    // todo B pick state 저장
+    // todo  pick state 저장
     setPickCount((pickCount) => pickCount + 1);
     return;
   };
@@ -88,10 +78,10 @@ const DetailNormalPick = ({ navigation }) => {
       </Title>
       <QaText>{"당신은 이러이러한 상황에 있다.\n이때, 당신의 선택은?"}</QaText>
       <PickBtnBox>
-        <PickBtn onPress={handleAPick}>
+        <PickBtn onPress={handlePick}>
           <PickText>A. 버린다</PickText>
         </PickBtn>
-        <PickBtn onPress={handleBPick}>
+        <PickBtn onPress={handlePick}>
           <PickText>B. 좋아한다</PickText>
         </PickBtn>
       </PickBtnBox>

@@ -12,8 +12,7 @@ import DetailReady from "../screens/pages/Detail/DetailReady";
 import DetailTinderPick from "../screens/pages/Detail/DetailTinderPick";
 import DetailNormalPick from "../screens/pages/Detail/DetailNormalPick";
 import { colors } from "../Style";
-import TinderResult from "../screens/pages/Result/TinderResult";
-import NormalResult from "../screens/pages/Result/NormalResult";
+import Result from "../screens/pages/Result";
 import Exchange from "../screens/pages/My/MyNav/Exchange";
 import Charge from "../screens/pages/My/MyNav/Charge";
 import History from "../screens/pages/My/MyNav/History";
@@ -73,14 +72,9 @@ function GlobalNav() {
           name="DetailTinderPick"
           options={{
             title: "뒤로",
+            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
             headerTintColor: "white",
-            headerStyle: {
-              backgroundColor: colors.main,
-              shadowColor: "transparent",
-              elevation: 0, // android
-              shadowOpacity: 0, //ios
-            },
           }}
           component={DetailTinderPick}
         />
@@ -88,51 +82,29 @@ function GlobalNav() {
           name="DetailNormalPick"
           options={{
             title: "뒤로",
+            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
             headerTintColor: "white",
-            headerStyle: {
-              backgroundColor: colors.main,
-              shadowColor: "transparent",
-              elevation: 0, // android
-              shadowOpacity: 0, //ios
-            },
           }}
           component={DetailNormalPick}
         />
         <Stack.Screen
-          name="TinderResult"
+          name="Result"
           options={{
             title: "뒤로",
+            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
           }}
-          component={TinderResult}
+          component={Result}
         />
-        <Stack.Screen
-          name="NormalResult"
-          options={{
-            title: "뒤로",
-            headerTitleStyle: { fontWeight: "700" },
-            headerTintColor: "white",
-            headerStyle: {
-              backgroundColor: colors.main,
-              shadowColor: "transparent",
-              elevation: 0, // android
-              shadowOpacity: 0, //ios
-            },
-          }}
-          component={NormalResult}
-        />
+
         <Stack.Screen
           name="ExChange"
           options={{
             title: "뒤로",
+            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
             headerTintColor: colors.main,
-            headerStyle: {
-              backgroundColor: "transparent",
-              elevation: 0, // android
-              shadowOpacity: 0, //ios
-            },
           }}
           component={Exchange}
         />
@@ -140,13 +112,9 @@ function GlobalNav() {
           name="Charge"
           options={{
             title: "뒤로",
+            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
             headerTintColor: colors.main,
-            headerStyle: {
-              backgroundColor: "transparent",
-              elevation: 0, // android
-              shadowOpacity: 0, //ios
-            },
           }}
           component={Charge}
         />
@@ -154,13 +122,14 @@ function GlobalNav() {
           name="History"
           options={{
             title: "뒤로",
+            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
             headerTintColor: colors.main,
-            headerStyle: {
-              backgroundColor: "transparent",
-              elevation: 0, // android
-              shadowOpacity: 0, //ios
-            },
+            // headerStyle: {
+            //   backgroundColor: "transparent",
+            //   elevation: 0, // android
+            //   shadowOpacity: 0, //ios
+            // },
           }}
           component={History}
         />
@@ -168,13 +137,9 @@ function GlobalNav() {
           name="MyPick"
           options={{
             title: "뒤로",
+            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
             headerTintColor: colors.main,
-            headerStyle: {
-              backgroundColor: "transparent",
-              elevation: 0, // android
-              shadowOpacity: 0, //ios
-            },
           }}
           component={MyPick}
         />
@@ -182,13 +147,9 @@ function GlobalNav() {
           name="MyFun"
           options={{
             title: "뒤로",
+            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
             headerTintColor: colors.main,
-            headerStyle: {
-              backgroundColor: "transparent",
-              elevation: 0, // android
-              shadowOpacity: 0, //ios
-            },
           }}
           component={MyFun}
         />

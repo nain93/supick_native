@@ -10,6 +10,7 @@ const Container = styled.View`
   flex: 1;
   background-color: ${colors.main};
   align-items: center;
+  justify-content: space-around;
 `;
 
 const SlideBtn = styled.TouchableOpacity`
@@ -32,7 +33,7 @@ const CountText = styled.Text`
 const BtnBox = styled.View`
   justify-content: space-around;
   width: 100%;
-  margin-top: 90%;
+  /* margin-top: 90%; */
 `;
 
 const ArrowBox = styled.View`
@@ -66,12 +67,12 @@ const DetailTinderPick = ({ navigation }) => {
   const [swipeCount, setSwipeCount] = useState(1);
   const swiper = useRef();
 
-  const refresh = () => {
-    if (swipeCount === 8) {
-      setSwipeCount(1);
-      return;
-    }
-  };
+  // const refresh = () => {
+  //   if (swipeCount === 8) {
+  //     setSwipeCount(1);
+  //     return;
+  //   }
+  // };
 
   const swipeLeft = () => {
     swiper?.current?.swipeLeft();
@@ -106,11 +107,12 @@ const DetailTinderPick = ({ navigation }) => {
           setSwipeCount(cardIndex);
         }}
         onSwipedAll={() => {
-          navigation.navigate("TinderResult");
+          navigation.navigate("Result");
         }}
         cardIndex={2}
         backgroundColor={colors.main}
         stackSize={3}
+        marginTop={50}
       />
       <BtnBox>
         <CountText>{swipeCount} / 8</CountText>
