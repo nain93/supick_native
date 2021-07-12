@@ -57,7 +57,7 @@ const ResultRecommend = ({ navigation }) => {
       <ImgBox>
         <RecommendImg source={{ uri: dummyData.result.List3.data[2].img }} />
       </ImgBox>
-      <Title>이번엔?! 무슨 PICK</Title>
+      <Title>이번엔 무슨 PICK?!</Title>
       <Carousel
         layout={"default"}
         renderItem={renderItem}
