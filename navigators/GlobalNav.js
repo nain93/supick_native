@@ -18,6 +18,7 @@ import Charge from "../screens/pages/My/MyNav/Charge";
 import History from "../screens/pages/My/MyNav/History";
 import MyPick from "../screens/pages/My/MySetting/MyPick";
 import MyFun from "../screens/pages/My/MySetting/MyFun";
+import ResultAll from "../screens/pages/Result/ResultAll";
 
 const TransitionScreenOptions = {
   ...TransitionPresets.ModalSlideFromBottomIOS,
@@ -72,9 +73,13 @@ function GlobalNav() {
           name="DetailTinderPick"
           options={{
             title: "뒤로",
-            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
             headerTintColor: "white",
+            headerStyle: {
+              backgroundColor: colors.main,
+              elevation: 0, // android
+              shadowOpacity: 0, //ios
+            },
           }}
           component={DetailTinderPick}
         />
@@ -92,10 +97,28 @@ function GlobalNav() {
           name="Result"
           options={{
             title: "뒤로",
-            headerTransparent: true,
             headerTitleStyle: { fontWeight: "700" },
+            headerStyle: {
+              backgroundColor: "transparent",
+              elevation: 0, // android
+              shadowOpacity: 0, //ios
+            },
           }}
           component={Result}
+        />
+
+        <Stack.Screen
+          name="ResultAll"
+          options={{
+            title: "뒤로",
+            headerTitleStyle: { fontWeight: "700" },
+            headerStyle: {
+              backgroundColor: "transparent",
+              elevation: 0, // android
+              shadowOpacity: 0, //ios
+            },
+          }}
+          component={ResultAll}
         />
 
         <Stack.Screen

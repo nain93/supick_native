@@ -4,17 +4,16 @@ import ResultMain from "./ResultMain";
 import ResultPKT from "./ResultPKT";
 import ResultRecommend from "./ResultRecommend";
 
-const Container = styled.View`
+const Container = styled.ScrollView`
   flex: 1;
-  justify-content: center;
 `;
 
 const Result = ({ navigation }) => {
   return (
     <Container>
       <ResultMain />
-      <ResultPKT />
-      <ResultRecommend />
+      <ResultPKT navigation={navigation} />
+      <ResultRecommend navigation={navigation} />
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/native";
+import styled from "styled-components";
 // import landing from "../assets/landing.png";
 import Carousel from "react-native-snap-carousel";
 import dummyData from "../data/dummyData";
@@ -9,6 +9,7 @@ const Container = styled.View`
   flex: 1;
   background-color: ${colors.main};
   align-items: center;
+  justify-content: center;
 `;
 
 // const Logo = styled.Image`
@@ -16,7 +17,8 @@ const Container = styled.View`
 // `;
 
 const ConnectSection = styled.View`
-  padding: 0 20px;
+  flex: 0.5;
+  justify-content: flex-start;
 `;
 
 const GoToStyle = styled.TouchableOpacity`
@@ -30,7 +32,6 @@ const GoToHome = styled(GoToStyle)``;
 
 const GoToWallet = styled(GoToStyle)`
   margin-top: 5%;
-  margin-bottom: 150px;
   background-color: white;
 `;
 
@@ -40,7 +41,8 @@ const ConnectText = styled.Text`
 `;
 
 const SlideBtn = styled.TouchableOpacity`
-  margin: 40% 0px;
+  flex: 1;
+  justify-content: center;
 `;
 
 const SlideImg = styled.Image`

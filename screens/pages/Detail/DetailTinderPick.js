@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from "react";
-import styled from "styled-components/native";
+import styled from "styled-components";
 import { colors, Title } from "../../../Style";
 import dummyData from "../../../data/dummyData";
 import Swiper from "react-native-deck-swiper";
@@ -10,7 +10,7 @@ const Container = styled.View`
   flex: 1;
   background-color: ${colors.main};
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 `;
 
 const SlideBtn = styled.TouchableOpacity`
@@ -33,7 +33,7 @@ const CountText = styled.Text`
 const BtnBox = styled.View`
   justify-content: space-around;
   width: 100%;
-  /* margin-top: 90%; */
+  margin-top: 5%;
 `;
 
 const ArrowBox = styled.View`
@@ -93,10 +93,6 @@ const DetailTinderPick = ({ navigation }) => {
 
   return (
     <Container>
-      <Title style={{ fontSize: 20, color: "white", zIndex: 1 }}>
-        Q) 당신의 연애스타일은..?
-      </Title>
-
       <Swiper
         ref={swiper}
         cards={dummyData.result.List1.data}
@@ -112,8 +108,12 @@ const DetailTinderPick = ({ navigation }) => {
         cardIndex={2}
         backgroundColor={colors.main}
         stackSize={3}
-        marginTop={50}
       />
+      <Title
+        style={{ fontSize: 20, color: "white", zIndex: 1, marginTop: 400 }}
+      >
+        Q) 당신의 연애스타일은..?
+      </Title>
       <BtnBox>
         <CountText>{swipeCount} / 8</CountText>
 
