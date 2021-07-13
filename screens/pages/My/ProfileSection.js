@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components/native";
 import dummyData from "../../../data/dummyData";
+import { userSelector } from "../../../selector";
 import { colors } from "../../../Style";
 
 const Container = styled.View`
@@ -37,7 +38,7 @@ const IconText = styled.Text`
 `;
 
 const ProfileSection = () => {
-  const { isLogin, nickName } = useSelector((state) => state.userReducer);
+  const { isLogin, nickName } = useSelector(userSelector);
 
   return (
     <Container>

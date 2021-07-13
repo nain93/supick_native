@@ -19,6 +19,7 @@ import History from "../screens/pages/My/MyNav/History";
 import MyPick from "../screens/pages/My/MySetting/MyPick";
 import MyFun from "../screens/pages/My/MySetting/MyFun";
 import ResultAll from "../screens/pages/Result/ResultAll";
+import ResultAllTest from "../screens/pages/Result/ResultAllTest";
 
 const TransitionScreenOptions = {
   ...TransitionPresets.ModalSlideFromBottomIOS,
@@ -118,7 +119,7 @@ function GlobalNav() {
               shadowOpacity: 0, //ios
             },
           }}
-          component={ResultAll}
+          component={ResultAllTest}
         />
 
         <Stack.Screen
