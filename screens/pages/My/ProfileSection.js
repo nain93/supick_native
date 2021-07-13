@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import styled from "styled-components/native";
+import styled from "styled-components";
 import dummyData from "../../../data/dummyData";
-import { userSelector } from "../../../selector";
-import { colors } from "../../../Style";
+import { userSelector } from "../../../redux/Selector";
+import { colors } from "../../../style";
 
 const Container = styled.View`
   padding: 20px;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../Style";
+import { colors } from "../style";
 
 const Container = styled.View``;
 

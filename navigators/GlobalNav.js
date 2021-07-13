@@ -11,7 +11,7 @@ import Upload from "../Components/Upload";
 import DetailReady from "../screens/pages/Detail/DetailReady";
 import DetailTinderPick from "../screens/pages/Detail/DetailTinderPick";
 import DetailNormalPick from "../screens/pages/Detail/DetailNormalPick";
-import { colors } from "../Style";
+import { colors } from "../style";
 import Result from "../screens/pages/Result";
 import Exchange from "../screens/pages/My/MyNav/Exchange";
 import Charge from "../screens/pages/My/MyNav/Charge";
@@ -19,7 +19,6 @@ import History from "../screens/pages/My/MyNav/History";
 import MyPick from "../screens/pages/My/MySetting/MyPick";
 import MyFun from "../screens/pages/My/MySetting/MyFun";
 import ResultAll from "../screens/pages/Result/ResultAll";
-import ResultAllTest from "../screens/pages/Result/ResultAllTest";
 
 const TransitionScreenOptions = {
   ...TransitionPresets.ModalSlideFromBottomIOS,
@@ -119,7 +118,7 @@ function GlobalNav() {
               shadowOpacity: 0, //ios
             },
           }}
-          component={ResultAllTest}
+          component={ResultAll}
         />
 
         <Stack.Screen

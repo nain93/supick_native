@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
-import styled from "styled-components/native";
-import { colors, Title } from "../../../Style";
+import styled from "styled-components";
+import { colors, Title } from "../../../style";
 import { useIsFocused, useFocusEffect } from "@react-navigation/native";
 
 const Container = styled.View`

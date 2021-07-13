@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import styled from "styled-components";
-import { colors, Title } from "../../../Style";
+import { colors, Title } from "../../../style";
 import dummyData from "../../../data/dummyData";
 import Swiper from "react-native-deck-swiper";
 import Ionicons from "react-native-vector-icons/Ionicons";

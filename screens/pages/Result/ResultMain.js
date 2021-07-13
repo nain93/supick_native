@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components/native";
-import { Title } from "../../../Style";
+import styled from "styled-components";
+import { Title } from "../../../style";
 import dummyData from "../../../data/dummyData";
 
 const Container = styled.View`

@@ -4,9 +4,9 @@ import { Keyboard, Platform, TouchableWithoutFeedback } from "react-native";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "@hookform/error-message";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { colors } from "../Style";
+import { colors } from "../style";
 import { useDispatch } from "react-redux";
-import { logIn, userNickName } from "../reducers/userReducer";
+import { logIn, userNickName } from "../redux/reducers/userReducer";
 
 const Text = styled.Text`
   width: 70%;

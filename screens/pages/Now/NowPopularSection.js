@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components/native";
-import { ItemBox, Title } from "../../../Style";
+import styled from "styled-components";
+import { ItemBox, Title } from "../../../style";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import dummyData from "../../../data/dummyData";
 

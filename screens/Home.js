@@ -3,7 +3,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import Now from "./pages/Now";
 import Fun from "./pages/Fun";
 import My from "./pages/My";
-import { colors } from "../Style";
+import { colors } from "../style";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Tab = createMaterialTopTabNavigator();

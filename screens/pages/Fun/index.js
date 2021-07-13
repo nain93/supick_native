@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/native";
+import styled from "styled-components";
 import FunPopularSection from "./FunPopularSection";
 import Ad from "../../../Components/Ad";
 import FunSlideSection from "./FunSlideSection";

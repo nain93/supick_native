@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components/native";
+import styled from "styled-components";
 import Carousel from "react-native-snap-carousel";
 import dummyData from "../../../data/dummyData";
-import { colors, Title } from "../../../Style";
+import { colors, Title } from "../../../style";
 
 const Container = styled.View``;
 

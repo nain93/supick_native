@@ -3,7 +3,7 @@ import styled from "styled-components";
 // import landing from "../assets/landing.png";
 import Carousel from "react-native-snap-carousel";
 import dummyData from "../data/dummyData";
-import { colors } from "../Style";
+import { colors } from "../style";
 
 const Container = styled.View`
   flex: 1;

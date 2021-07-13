@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/native";
+import styled from "styled-components";
 import dummyData from "../../../data/dummyData";
 import Ad from "../../../Components/Ad";
 import FilterSection from "./FilterSection";

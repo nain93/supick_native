@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components/native";
-import { colors, Title } from "../../../Style";
+import styled from "styled-components";
+import { colors, Title } from "../../../style";
 
 const Container = styled.View``;
 

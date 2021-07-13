@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, FlatList } from "react-native";
 import styled from "styled-components";
 import NormalButton from "../../../Components/NormalButton";
 import dummyData from "../../../data/dummyData";
@@ -10,9 +10,7 @@ const Container = styled.View`
   flex: 1;
 `;
 
-const ScrollContainer = styled.ScrollView`
-  flex: 1;
-`;
+const FlatView = styled.View``;
 
 const ResultItemBox = styled.View`
   width: 100%;
@@ -75,42 +73,54 @@ const ResultAll = ({ navigation }) => {
     return;
   };
 
+  const renderItem = ({ item }) => (
+    <ResultItemBox>
+      <Item>
+        <ItemImg source={{ uri: item.img }} />
+        <TitleBox>
+          <ItemTitle>집중, 기초 체력키우기</ItemTitle>
+          <ItemDesc>전체 이용자 중 %가 해당 됩니다.</ItemDesc>
+          <ItemBtnBox>
+            <TouchableOpacity
+              style={{ marginRight: "5%" }}
+              onPress={() => handleDetailOpen(item.id)}
+            >
+              <ItemBtnText>자세히 보기</ItemBtnText>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <ItemBtnText>추천 링크</ItemBtnText>
+            </TouchableOpacity>
+          </ItemBtnBox>
+        </TitleBox>
+      </Item>
+      <View
+        style={item.id === pickId ? { display: "flex" } : { display: "none" }}
+      >
+        <DescText>당신의 결과는 설명과 같습니다</DescText>
+        <DescText>당신의 결과는 설명과 같습니다</DescText>
+        <DescText>당신의 결과는 설명과 같습니다</DescText>
+      </View>
+    </ResultItemBox>
+  );
+
+  const [refreshing, setRefreshing] = useState(false);
+
+  const refresh = async () => {
+    setRefreshing(true);
+    await // todo api 요청
+    setRefreshing(false);
+  };
+
   return (
     <Container>
-      <ScrollContainer>
-        {dummyData.result.List4.data.slice(0, 10).map((item) => (
-          <ResultItemBox key={item.id}>
-            <Item>
-              <ItemImg source={{ uri: item.img }} />
-              <TitleBox>
-                <ItemTitle>집중, 기초 체력키우기</ItemTitle>
-                <ItemDesc>전체 이용자 중 %가 해당 됩니다.</ItemDesc>
-                <ItemBtnBox>
-                  <TouchableOpacity
-                    style={{ marginRight: "5%" }}
-                    onPress={() => handleDetailOpen(item.id)}
-                  >
-                    <ItemBtnText>자세히 보기</ItemBtnText>
-                  </TouchableOpacity>
-                  <TouchableOpacity>
-                    <ItemBtnText>추천 링크</ItemBtnText>
-                  </TouchableOpacity>
-                </ItemBtnBox>
-              </TitleBox>
-            </Item>
-            <View
-              style={
-                item.id === pickId ? { display: "flex" } : { display: "none" }
-              }
-            >
-              <DescText>당신의 결과는 설명과 같습니다</DescText>
-              <DescText>당신의 결과는 설명과 같습니다</DescText>
-              <DescText>당신의 결과는 설명과 같습니다</DescText>
-            </View>
-          </ResultItemBox>
-        ))}
-      </ScrollContainer>
-
+      <FlatList
+        refreshing={refreshing}
+        onRefresh={() => setRefreshing(true)}
+        onEndReached={() => console.log("end reached")}
+        data={dummyData.result.List4.data.slice(0, 10)}
+        renderItem={renderItem}
+        keyExtractor={(item) => "" + item.id}
+      />
       <NormalButton
         navigation={navigation}
         children={"다른 PICK 해보기"}

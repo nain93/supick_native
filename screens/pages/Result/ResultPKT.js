@@ -5,7 +5,7 @@ import {
   AntDesign,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
-import { colors } from "../../../Style";
+import { colors } from "../../../style";
 import NormalButton from "../../../Components/NormalButton";
 
 const Container = styled.View`

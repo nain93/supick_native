@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components/native";
-import { colors } from "../../../Style";
+import styled from "styled-components";
+import { colors } from "../../../style";
 
 const Container = styled.View`
   padding: 0 20px;

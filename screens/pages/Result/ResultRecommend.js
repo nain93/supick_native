@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { colors, Title } from "../../../Style";
+import { colors, Title } from "../../../style";
 import dummyData from "../../../data/dummyData";
 import Carousel from "react-native-snap-carousel";
 import { ActivityIndicator } from "react-native";

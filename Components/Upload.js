@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import styled from "styled-components/native";
-import { colors } from "../Style";
+import styled from "styled-components";
+import { colors } from "../style";
 import { Keyboard, Platform, TouchableWithoutFeedback } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useForm } from "react-hook-form";
