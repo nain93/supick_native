@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Foundation,
-  AntDesign,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { Foundation, AntDesign, Ionicons } from "@expo/vector-icons";
 import { colors } from "../../../style";
 import NormalButton from "../../../Components/NormalButton";
 
@@ -67,12 +63,7 @@ const ResultPKT = ({ navigation }) => {
         </PktBtn>
         <PktBtn>
           <BtnBox>
-            <MaterialCommunityIcons
-              name="share"
-              size={18}
-              color="black"
-              style={{ transform: [{ rotateY: "180deg" }] }}
-            />
+            <Ionicons name="md-arrow-undo" size={18} color="black" />
             <PktBtnText>공유</PktBtnText>
           </BtnBox>
           <PktBtnText>12</PktBtnText>

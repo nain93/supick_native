@@ -8,7 +8,7 @@ import landing from "./assets/landing.png";
 import { AppearanceProvider } from "react-native-appearance";
 import { Appearance } from "react-native";
 import { Provider } from "react-redux";
-import store from "./store/store";
+import store from "./redux/store";
 
 export default function App() {
   const [loading, setLoading] = useState(true);

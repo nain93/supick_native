@@ -16,3 +16,4 @@ npm install react-native-safe-area-context
 npm i react-native-keyboard-aware-scroll-view
 npm install react-native-deck-swiper --save
 npm install react-redux @reduxjs/toolkit
+npm i react-native-modal-selector --save
