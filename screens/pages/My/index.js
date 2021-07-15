@@ -13,7 +13,7 @@ const Container = styled.ScrollView`
 function My({ navigation }) {
   return (
     <Container>
-      <ProfileSection />
+      <ProfileSection navigation={navigation} />
       <MyNavSection navigation={navigation} />
       <Ad dummyData={dummyData.result.Ad1.data[2]} />
       <MySettingSection />

@@ -58,8 +58,7 @@ function Wallet({ navigation }) {
 
   const onSubmit = (data) => {
     const { nickname } = data;
-    dispatch(userNickName(nickname));
-    dispatch(logIn(true));
+    dispatch(logIn(nickname));
     navigation.navigate("Home");
     // * nickname 저장, 로그인 true
   };

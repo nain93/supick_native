@@ -8,7 +8,8 @@ import landing from "./assets/landing.png";
 import { AppearanceProvider } from "react-native-appearance";
 import { Appearance } from "react-native";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import { PersistGate } from "redux-persist/integration/react";
+import store, { persistor } from "./redux/store";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -37,9 +38,11 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <AppearanceProvider>
-        <GlobalNav />
-      </AppearanceProvider>
+      <PersistGate loading={null} persistor={persistor}>
+        <AppearanceProvider>
+          <GlobalNav />
+        </AppearanceProvider>
+      </PersistGate>
     </Provider>
   );
 }

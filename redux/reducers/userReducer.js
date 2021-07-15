@@ -4,23 +4,20 @@ export const userSlice = createSlice({
   name: "user",
   initialState: {
     nickName: "guest",
-    loading: false,
-    isLogin: false,
+    isLoggedIn: false,
   },
   reducers: {
-    logIn: (state) => {
-      state.islogin = true;
+    logIn: (state, action) => {
+      state.isLoggedIn = true;
+      state.nickName = action.payload;
     },
     logOut: (state) => {
-      state.islogin = false;
-    },
-    userNickName: (state, action) => {
-      state.nickName = action.payload;
+      state.isLoggedIn = false;
+      state.nickName = "guest";
     },
   },
 });
 
-export const { logIn, logOut, userNickName } = userSlice.actions;
-export const handleLogin = (state) => state.userSlice.islogin;
+export const { logIn, logOut } = userSlice.actions;
 
 export default userSlice.reducer;
