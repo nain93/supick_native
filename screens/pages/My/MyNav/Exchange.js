@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { colors, Title } from "../../../../style";
 import { Text, TextInput } from "react-native";
@@ -8,6 +8,7 @@ import dummyData from "../../../../data/dummyData";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
+import { useFocusEffect } from "@react-navigation/core";
 
 const CoinBtnBox = styled.View``;
 
@@ -61,9 +62,12 @@ const Exchange = () => {
     register("coin", { required: "교환할 코인 갯수를 입력해주세요" });
   }, [register]);
 
-  useEffect(() => {
-    coinRef?.current?.focus();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      coinRef?.current?.focus();
+      return;
+    }, [])
+  );
 
   return (
     <KeyboardAwareScrollView
