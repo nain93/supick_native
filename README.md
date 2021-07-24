@@ -20,3 +20,5 @@ npm i react-native-modal-selector --save
 npm install redux-persist
 npm install @react-native-async-storage/async-storage
 npm i react-native-reanimated/plugin
+npm i unimodules-font-interface
+npm i unimodules-constants-interface

@@ -143,7 +143,6 @@ const PopularSection = ({ navigation }) => {
                     </IconView>
                   </DescText>
                 </DescItem>
-                <TestText>픽화면 테스트용 카드</TestText>
               </Item>
             );
           })}
